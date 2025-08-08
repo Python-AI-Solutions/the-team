@@ -1,0 +1,181 @@
+{
+  "basics": {
+    "name": "Chevula Jeevan",
+    "label": "AI Engineer",
+    "image": "/photos/Chevula_Jeevan.jpg",
+    "email": "jeevanchevulaa@gmail.com",
+    "phone": "+91 9700240125",
+    "url": "https://linkedin.com/in/jeevan-chevula-9b3bb1221",
+    "summary": "Versatile AI/ML engineer with hands-on experience in RAG chatbots, Groq-powered LLM agents, and OCR/CV workflows. Passionate about shipping end-to-end GenAI solutions in cloud environments.",
+    "location": {
+      "address": "4-138 Gaddivanipally, Ellanthakunta",
+      "postalCode": "505475",
+      "city": "Karimnagar",
+      "countryCode": "IN",
+      "region": "Telangana"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jeevan-chevula-9b3bb1221",
+        "url": "https://www.linkedin.com/in/jeevan-chevula-9b3bb1221"
+      },
+      {
+        "network": "GitHub",
+        "username": "JeevanChevula",
+        "url": "https://github.com/JeevanChevula"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "PiHex Labs",
+      "position": "AI Engineer",
+      "url": "https://pihexlabs.com",
+      "startDate": "2025-08",
+      "endDate": "",
+      "summary": "Developing Groq-powered multi-agent pipelines and image-processing modules for client projects.",
+      "highlights": []
+    },
+    {
+      "name": "HCL Technologies",
+      "position": "Graduate Engineer Trainee",
+      "url": "https://www.hcltech.com",
+      "startDate": "2022-09",
+      "endDate": "2024-06",
+      "summary": "Contributed to AI-driven document automation and OCR projects within enterprise delivery teams.",
+      "highlights": [
+        "Built invoice-field extractor (Tesseract + TF-IDF classifier) reducing manual effort by 60%",
+        "Implemented expiry-date detection pipeline deployed via FastAPI."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Sri Indu College of Engineering and Technology",
+      "url": "",
+      "area": "Computer Science & Engineering",
+      "studyType": "Bachelor of Technology",
+      "startDate": "2017-08",
+      "endDate": "2021-06",
+      "score": "7.5 CGPA",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "GenAI & LLM",
+      "level": "Intermediate",
+      "keywords": [
+        "Groq LLaMA 3",
+        "OpenAI API",
+        "Prompt Design",
+        "LangChain",
+        "Multi-Agent Systems"
+      ]
+    },
+    {
+      "name": "RAG & Vector DBs",
+      "level": "Intermediate",
+      "keywords": [
+        "FAISS",
+        "ChromaDB",
+        "Recursive Text Split",
+        "PDF processing"
+      ]
+    },
+    {
+      "name": "Backend",
+      "level": "Intermediate",
+      "keywords": [
+        "FastAPI",
+        "Python"
+      ]
+    },
+    {
+      "name": "Computer Vision",
+      "level": "Intermediate",
+      "keywords": [
+        "OpenCV",
+        "Tesseract",
+        "YOLO",
+        "Stable Diffusion"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI-powered Health Claim Processing",
+      "description": "Modular multi-agent pipeline classifying medical PDFs and extracting structured fields with Groq LLaMA 3.",
+      "highlights": [
+        "FastAPI backend",
+        "JSON inference output",
+        "Extensible agent design"
+      ],
+      "keywords": [
+        "FastAPI",
+        "Groq",
+        "RAG"
+      ],
+      "startDate": "2024-03",
+      "endDate": "2024-05",
+      "url": "",
+      "roles": [
+        "Lead developer"
+      ],
+      "entity": "Personal project",
+      "type": "Backend service"
+    },
+    {
+      "name": "RAG FAQ Chatbot (Cloud Run)",
+      "description": "LangChain + FAISS/Chroma chatbot with PDF upload, deployed on Google Cloud Run.",
+      "highlights": [
+        "Hybrid retrieval",
+        "Cloud-native deployment"
+      ],
+      "keywords": [
+        "LangChain",
+        "FAISS",
+        "Cloud Run"
+      ],
+      "startDate": "2024-06",
+      "endDate": "2024-07",
+      "url": "https://rag-faq-chatbot-490000420348.asia-south1.run.app",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal project",
+      "type": "Web service"
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Telugu",
+      "fluency": "Native"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Generative AI",
+      "keywords": [
+        "Transformers",
+        "Diffusion Models"
+      ]
+    },
+    {
+      "name": "Sports",
+      "keywords": [
+        "Cricket",
+        "Volleyball"
+      ]
+    }
+  ],
+  "references": [],
+  "volunteer": []
+}

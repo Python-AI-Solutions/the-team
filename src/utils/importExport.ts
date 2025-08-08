@@ -44,22 +44,22 @@ function safeStringEnsure(value: unknown): string {
   return String(value);
 }
 
-function validateAndCleanWorkExperience(work: unknown, invalidFields: InvalidField[]): unknown {
+function validateAndCleanWorkExperience(work: any, invalidFields: InvalidField[]): unknown {
   const cleaned = {
-    name: safeStringEnsure(work.name),
-    location: safeStringEnsure(work.location),
-    description: safeStringEnsure(work.description),
-    position: safeStringEnsure(work.position),
-    url: safeStringEnsure(work.url),
-    startDate: safeStringEnsure(work.startDate),
-    endDate: safeStringEnsure(work.endDate),
-    summary: safeStringEnsure(work.summary),
-    highlights: safeArrayEnsure(work.highlights).map(h => safeStringEnsure(h)),
-    visible: work.visible !== false
+    name: safeStringEnsure(work?.name),
+    location: safeStringEnsure(work?.location),
+    description: safeStringEnsure(work?.description),
+    position: safeStringEnsure(work?.position),
+    url: safeStringEnsure(work?.url),
+    startDate: safeStringEnsure(work?.startDate),
+    endDate: safeStringEnsure(work?.endDate),
+    summary: safeStringEnsure(work?.summary),
+    highlights: safeArrayEnsure(work?.highlights).map(h => safeStringEnsure(h)),
+    visible: work?.visible !== false
   };
 
   // Track invalid fields
-  if (work.highlights && !Array.isArray(work.highlights)) {
+  if (work?.highlights && !Array.isArray(work.highlights)) {
     invalidFields.push({
       section: 'work',
       field: 'highlights',
@@ -71,20 +71,20 @@ function validateAndCleanWorkExperience(work: unknown, invalidFields: InvalidFie
   return cleaned;
 }
 
-function validateAndCleanEducation(education: unknown, invalidFields: InvalidField[]): unknown {
+function validateAndCleanEducation(education: any, invalidFields: InvalidField[]): unknown {
   const cleaned = {
-    institution: safeStringEnsure(education.institution),
-    url: safeStringEnsure(education.url),
-    area: safeStringEnsure(education.area),
-    studyType: safeStringEnsure(education.studyType),
-    startDate: safeStringEnsure(education.startDate),
-    endDate: safeStringEnsure(education.endDate),
-    score: safeStringEnsure(education.score),
-    courses: safeArrayEnsure(education.courses).map(c => safeStringEnsure(c)),
-    visible: education.visible !== false
+    institution: safeStringEnsure(education?.institution),
+    url: safeStringEnsure(education?.url),
+    area: safeStringEnsure(education?.area),
+    studyType: safeStringEnsure(education?.studyType),
+    startDate: safeStringEnsure(education?.startDate),
+    endDate: safeStringEnsure(education?.endDate),
+    score: safeStringEnsure(education?.score),
+    courses: safeArrayEnsure(education?.courses).map(c => safeStringEnsure(c)),
+    visible: education?.visible !== false
   };
 
-  if (education.courses && !Array.isArray(education.courses)) {
+  if (education?.courses && !Array.isArray(education.courses)) {
     invalidFields.push({
       section: 'education',
       field: 'courses',
@@ -96,15 +96,15 @@ function validateAndCleanEducation(education: unknown, invalidFields: InvalidFie
   return cleaned;
 }
 
-function validateAndCleanSkills(skill: unknown, invalidFields: InvalidField[]): unknown {
+function validateAndCleanSkills(skill: any, invalidFields: InvalidField[]): unknown {
   const cleaned = {
-    name: safeStringEnsure(skill.name),
-    level: safeStringEnsure(skill.level),
-    keywords: safeArrayEnsure(skill.keywords).map(k => safeStringEnsure(k)),
-    visible: skill.visible !== false
+    name: safeStringEnsure(skill?.name),
+    level: safeStringEnsure(skill?.level),
+    keywords: safeArrayEnsure(skill?.keywords).map(k => safeStringEnsure(k)),
+    visible: skill?.visible !== false
   };
 
-  if (skill.keywords && !Array.isArray(skill.keywords)) {
+  if (skill?.keywords && !Array.isArray(skill.keywords)) {
     invalidFields.push({
       section: 'skills',
       field: 'keywords',
@@ -119,14 +119,15 @@ function validateAndCleanSkills(skill: unknown, invalidFields: InvalidField[]): 
 function validateJsonResumeStructure(data: unknown): boolean {
   // Basic validation for JSON Resume format
   if (!data || typeof data !== 'object') return false;
-  
+
+  const obj = data as any;
   // Check if it has basics section (required in JSON Resume)
-  if (!data.basics || typeof data.basics !== 'object') return false;
+  if (!obj.basics || typeof obj.basics !== 'object') return false;
   
   // Check if arrays are actually arrays
   const arrayFields = ['work', 'education', 'skills', 'projects', 'awards', 'certificates', 'publications', 'languages', 'interests', 'references', 'volunteer'];
   for (const field of arrayFields) {
-    if (data[field] && !Array.isArray(data[field])) {
+    if (obj[field] && !Array.isArray(obj[field])) {
       return false;
     }
   }
@@ -137,9 +138,10 @@ function validateJsonResumeStructure(data: unknown): boolean {
 function validateHROpenStructure(data: unknown): boolean {
   // Basic validation for HR Open format
   if (!data || typeof data !== 'object') return false;
-  
+
+  const obj = data as any;
   // Check for HR Open specific structure
-  return !!(data.person && data.person.name);
+  return !!(obj.person && obj.person.name);
 }
 
 export function importResumeData(jsonString: string): ImportResult {
@@ -184,17 +186,17 @@ export function importResumeData(jsonString: string): ImportResult {
           countryCode: safeStringEnsure(parsed.basics?.location?.countryCode),
           region: safeStringEnsure(parsed.basics?.location?.region)
         },
-        profiles: safeArrayEnsure(parsed.basics?.profiles).map(profile => ({
+        profiles: safeArrayEnsure(parsed.basics?.profiles).map((profile: any) => ({
           network: safeStringEnsure(profile.network),
           username: safeStringEnsure(profile.username),
           url: safeStringEnsure(profile.url),
           visible: profile.visible !== false
         }))
       },
-          work: safeArrayEnsure(parsed.work).map((work: unknown) => validateAndCleanWorkExperience(work, invalidFields)),
-    education: safeArrayEnsure(parsed.education).map((edu: unknown) => validateAndCleanEducation(edu, invalidFields)),
-    skills: safeArrayEnsure(parsed.skills).map((skill: unknown) => validateAndCleanSkills(skill, invalidFields)),
-    projects: safeArrayEnsure(parsed.projects).map((project: unknown) => ({
+      work: safeArrayEnsure(parsed.work).map((work: any) => validateAndCleanWorkExperience(work, invalidFields)) as any,
+      education: safeArrayEnsure(parsed.education).map((edu: any) => validateAndCleanEducation(edu, invalidFields)) as any,
+      skills: safeArrayEnsure(parsed.skills).map((skill: any) => validateAndCleanSkills(skill, invalidFields)) as any,
+      projects: safeArrayEnsure(parsed.projects).map((project: any) => ({
         name: safeStringEnsure(project.name),
         description: safeStringEnsure(project.description),
         highlights: safeArrayEnsure(project.highlights).map(h => safeStringEnsure(h)),
@@ -206,45 +208,45 @@ export function importResumeData(jsonString: string): ImportResult {
         entity: safeStringEnsure(project.entity),
         type: safeStringEnsure(project.type),
         visible: project.visible !== false
-      })),
-      awards: safeArrayEnsure(parsed.awards).map((award: unknown) => ({
+      })) as any,
+      awards: safeArrayEnsure(parsed.awards).map((award: any) => ({
         title: safeStringEnsure(award.title),
         date: safeStringEnsure(award.date),
         awarder: safeStringEnsure(award.awarder),
         summary: safeStringEnsure(award.summary),
         visible: award.visible !== false
-      })),
-      certificates: safeArrayEnsure(parsed.certificates).map((cert: unknown) => ({
+      })) as any,
+      certificates: safeArrayEnsure(parsed.certificates).map((cert: any) => ({
         name: safeStringEnsure(cert.name),
         date: safeStringEnsure(cert.date),
         issuer: safeStringEnsure(cert.issuer),
         url: safeStringEnsure(cert.url),
         visible: cert.visible !== false
-      })),
-      publications: safeArrayEnsure(parsed.publications).map((pub: unknown) => ({
+      })) as any,
+      publications: safeArrayEnsure(parsed.publications).map((pub: any) => ({
         name: safeStringEnsure(pub.name),
         publisher: safeStringEnsure(pub.publisher),
         releaseDate: safeStringEnsure(pub.releaseDate),
         url: safeStringEnsure(pub.url),
         summary: safeStringEnsure(pub.summary),
         visible: pub.visible !== false
-      })),
-      languages: safeArrayEnsure(parsed.languages).map((lang: unknown) => ({
+      })) as any,
+      languages: safeArrayEnsure(parsed.languages).map((lang: any) => ({
         language: safeStringEnsure(lang.language),
         fluency: safeStringEnsure(lang.fluency),
         visible: lang.visible !== false
-      })),
-      interests: safeArrayEnsure(parsed.interests).map((interest: unknown) => ({
+      })) as any,
+      interests: safeArrayEnsure(parsed.interests).map((interest: any) => ({
         name: safeStringEnsure(interest.name),
         keywords: safeArrayEnsure(interest.keywords).map(k => safeStringEnsure(k)),
         visible: interest.visible !== false
-      })),
-      references: safeArrayEnsure(parsed.references).map((ref: unknown) => ({
+      })) as any,
+      references: safeArrayEnsure(parsed.references).map((ref: any) => ({
         name: safeStringEnsure(ref.name),
         reference: safeStringEnsure(ref.reference),
         visible: ref.visible !== false
-      })),
-      volunteer: safeArrayEnsure(parsed.volunteer).map((vol: unknown) => ({
+      })) as any,
+      volunteer: safeArrayEnsure(parsed.volunteer).map((vol: any) => ({
         organization: safeStringEnsure(vol.organization),
         position: safeStringEnsure(vol.position),
         url: safeStringEnsure(vol.url),
@@ -253,7 +255,7 @@ export function importResumeData(jsonString: string): ImportResult {
         summary: safeStringEnsure(vol.summary),
         highlights: safeArrayEnsure(vol.highlights).map(h => safeStringEnsure(h)),
         visible: vol.visible !== false
-      })),
+      })) as any,
       sectionVisibility: {
         basics: true,
         work: true,
@@ -270,6 +272,42 @@ export function importResumeData(jsonString: string): ImportResult {
         ...parsed.sectionVisibility
       }
     };
+    // Ensure basics.image is empty when not provided or blank
+    resumeData.basics.image = resumeData.basics.image && resumeData.basics.image.trim() !== ''
+      ? resumeData.basics.image
+      : '';
+    // If a basics.image is provided, auto-map it to the photo field so it
+    // renders beside the icon without manual upload. Supports either a
+    // public path (e.g., /photos/name.jpg) or a data URL.
+    if (resumeData.basics.image) {
+      const defaultTop = (resumeData.icon as any)?.position?.top ?? 20;
+      const defaultRight = ((resumeData.icon as any)?.position?.right ?? 20) + 80;
+      resumeData.photo = {
+        data: resumeData.basics.image,
+        position: { top: defaultTop, right: defaultRight },
+        size: 60,
+      };
+    }
+
+    // Apply icon from input JSON when provided, otherwise set a default
+    // brand icon path so resumes render with branding by default.
+    const parsedIcon = (parsed as any).icon;
+    if (parsedIcon && typeof parsedIcon === 'object' && parsedIcon.data) {
+      resumeData.icon = {
+        data: parsedIcon.data,
+        position: {
+          top: parsedIcon.position?.top ?? 24,
+          right: parsedIcon.position?.right ?? 24,
+        },
+        size: parsedIcon.size ?? 56,
+      };
+    } else if (!resumeData.icon) {
+      resumeData.icon = {
+        data: 'pythonaisolutions-icon.png',
+        position: { top: 15, right: 25 },
+        size: 70,
+      };
+    }
 
     // Add non-conforming data if there were issues
     if (invalidFields.length > 0) {

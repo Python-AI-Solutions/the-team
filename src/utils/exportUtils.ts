@@ -838,6 +838,37 @@ async function tryLoadUnicodeFont(pdf: unknown): Promise<boolean> {
   }
 }
 
+// Convert a path or data string to a data URL usable by jsPDF
+async function resolveImageDataUrl(source: string | undefined): Promise<string | null> {
+  if (!source) return null;
+  // Already a data URL
+  if (source.startsWith('data:image')) return source;
+  try {
+    // Normalize app-relative paths
+    let path = source;
+    if (!/^https?:\/\//.test(path) && !path.startsWith('/')) {
+      path = `/${path}`;
+    }
+    const resp = await fetch(path);
+    if (!resp.ok) return null;
+    const blob = await resp.blob();
+    return await new Promise<string>((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result as string);
+      reader.readAsDataURL(blob);
+    });
+  } catch {
+    return null;
+  }
+}
+
+function inferJsPdfImageType(source?: string, dataUrl?: string): 'PNG' | 'JPEG' {
+  const s = (source || '').toLowerCase();
+  if (s.endsWith('.jpg') || s.endsWith('.jpeg')) return 'JPEG';
+  if (dataUrl && dataUrl.startsWith('data:image/jpeg')) return 'JPEG';
+  return 'PNG';
+}
+
 export async function exportAsPDF(resumeData: ResumeData, theme: Theme) {
   const { jsPDF } = await import('jspdf');
   const pdf = new jsPDF();
@@ -913,6 +944,38 @@ export async function exportAsPDF(resumeData: ResumeData, theme: Theme) {
   } else {
     console.info('PDF Export: Unicode support detected. Preserving original characters.');
   }
+
+  // Render icon and photo (top-right anchored), if available
+  const pxToMm = (px: number) => px * 0.264583; // 96dpi assumption
+  let topVisualBottomMm = 0;
+  if (resumeData.icon?.data && resumeData.icon.position && resumeData.icon.size) {
+    const dataUrl = await resolveImageDataUrl(resumeData.icon.data);
+    if (dataUrl) {
+      const sizeMm = pxToMm(resumeData.icon.size);
+      const topMm = pxToMm(resumeData.icon.position.top || 20);
+      const rightMm = pxToMm(resumeData.icon.position.right || 20);
+      const x = pdf.internal.pageSize.getWidth() - rightMm - sizeMm;
+      const y = topMm;
+      const type = inferJsPdfImageType(resumeData.icon.data, dataUrl);
+      (pdf as any).addImage(dataUrl, type, x, y, sizeMm, sizeMm);
+      topVisualBottomMm = Math.max(topVisualBottomMm, y + sizeMm);
+    }
+  }
+  if (resumeData.photo?.data && resumeData.photo.position && resumeData.photo.size) {
+    const dataUrl = await resolveImageDataUrl(resumeData.photo.data);
+    if (dataUrl) {
+      const sizeMm = pxToMm(resumeData.photo.size);
+      const topMm = pxToMm(resumeData.photo.position.top || 20);
+      const rightMm = pxToMm(resumeData.photo.position.right || 100);
+      const x = pdf.internal.pageSize.getWidth() - rightMm - sizeMm;
+      const y = topMm;
+      const type = inferJsPdfImageType(resumeData.photo.data, dataUrl);
+      (pdf as any).addImage(dataUrl, type, x, y, sizeMm, sizeMm);
+      topVisualBottomMm = Math.max(topVisualBottomMm, y + sizeMm);
+    }
+  }
+  // Avoid overlap with header text if visuals occupy top area
+  yPosition = Math.max(yPosition, topVisualBottomMm + 6);
 
   // Header section
   if (resumeData.sectionVisibility.basics) {
@@ -1115,5 +1178,87 @@ export async function exportAsPDF(resumeData: ResumeData, theme: Theme) {
   }
 
   const filename = generateExportFilename(resumeData, 'pdf', undefined, true);
+  pdf.save(filename);
+}
+
+// High-fidelity export: capture the DOM renderer exactly as seen on screen.
+export async function exportAsPDFHighFidelity(resumeData: ResumeData) {
+  const { default: html2canvas } = await import('html2canvas');
+  // Try to locate the on-screen resume container
+  const target = document.querySelector('[data-testid="resume-renderer"]') as HTMLElement | null
+    || document.querySelector('.resume-renderer') as HTMLElement | null
+    || document.getElementById('root');
+  if (!target) {
+    console.warn('High-fidelity PDF: resume renderer not found.');
+    return exportAsPDF(resumeData, {
+      // Minimal theme shim to reuse text export if needed
+      id: 'fallback',
+      name: 'Fallback',
+      colors: { primary: '#2563eb', secondary: '#64748b', accent: '#0ea5e9', text: '#1e293b', textSecondary: '#64748b', background: '#ffffff', border: '#e2e8f0' },
+      typography: { fontFamily: 'Inter', fontSize: 14, lineHeight: 1.5 },
+      fonts: { heading: 'Inter', body: 'Inter' },
+      spacing: { section: '2rem', item: '1rem' }
+    } as any);
+  }
+
+  // Render the element at high scale for crispness
+  const canvas = await html2canvas(target, {
+    backgroundColor: '#ffffff',
+    scale: 2,
+    useCORS: true,
+    logging: false,
+    windowWidth: target.scrollWidth,
+    windowHeight: target.scrollHeight,
+  });
+
+  const { jsPDF } = await import('jspdf');
+  const pdf = new jsPDF('p', 'mm', 'a4');
+
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+  // Tight margins so content fills A4 while keeping a small printable border
+  const margin = 3; // mm
+  const contentWidth = pageWidth - margin * 2;
+  const contentHeight = pageHeight - margin * 2;
+
+  // Full-width pagination so output fills A4 with standard margins
+  const imgWidthPx = canvas.width;
+  const imgHeightPx = canvas.height;
+  const renderWidth = contentWidth; // fill width
+  const pxPerMm = imgWidthPx / renderWidth; // pixels per mm at target width
+  // Make the page break align with CSS pixel grid to avoid rounding gaps.
+  const pageHeightPx = Math.round(contentHeight * pxPerMm);
+
+  // Single-page case: scale to fill height (no large bottom gap), center horizontally
+  if (imgHeightPx <= Math.round(contentHeight * (imgWidthPx / contentWidth))) {
+    const widthToFillHeightMm = contentHeight / (imgHeightPx / imgWidthPx);
+    const x = (pageWidth - widthToFillHeightMm) / 2;
+    const pageData = canvas.toDataURL('image/png');
+    (pdf as any).addImage(pageData, 'PNG', x, margin, widthToFillHeightMm, contentHeight);
+  } else {
+    let offsetY = 0;
+    let pageIndex = 0;
+    while (offsetY < imgHeightPx) {
+    const sliceHeightPx = Math.min(pageHeightPx, imgHeightPx - offsetY);
+    const pageCanvas = document.createElement('canvas');
+    pageCanvas.width = imgWidthPx;
+    pageCanvas.height = sliceHeightPx;
+    const ctx = pageCanvas.getContext('2d');
+    if (!ctx) break;
+    ctx.drawImage(
+      canvas,
+      0, offsetY, imgWidthPx, sliceHeightPx, // source crop
+      0, 0, imgWidthPx, sliceHeightPx // destination
+    );
+    const pageData = pageCanvas.toDataURL('image/png');
+    const renderHeightMm = sliceHeightPx / pxPerMm;
+    (pdf as any).addImage(pageData, 'PNG', margin, margin, renderWidth, renderHeightMm);
+    offsetY += sliceHeightPx;
+    pageIndex += 1;
+    if (offsetY < imgHeightPx) pdf.addPage();
+    }
+  }
+
+  const filename = generateExportFilename(resumeData, 'pdf', 'hf', true);
   pdf.save(filename);
 }
