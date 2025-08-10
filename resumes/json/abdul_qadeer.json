@@ -1,0 +1,157 @@
+{
+  "basics": {
+    "name": "Mohammed Abdul Qadeer",
+    "label": "LLM Application Engineer",
+    "image": "/photos/Abdul_Qadeer.jpg",
+    "email": "abdulqadeer.2k2@gmail.com",
+    "phone": "+91 8008111665",
+    "url": "https://linkedin.com/in/md-abdul-qadeer",
+    "summary": "AI engineer focused on production-scale LLM deployment, RAG architectures, and multi-agent automation workflows. Proven track record delivering high-accuracy, scalable inference pipelines in fast-paced environments.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Hyderabad",
+      "countryCode": "IN",
+      "region": "Telangana"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "md-abdul-qadeer",
+        "url": "https://linkedin.com/in/md-abdul-qadeer"
+      },
+      {
+        "network": "GitHub",
+        "username": "AbdulQadeer1234",
+        "url": "https://github.com/AbdulQadeer1234"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "PiHex Labs",
+      "position": "LLM Application Engineer",
+      "url": "https://pihexlabs.com",
+      "startDate": "2025-08",
+      "endDate": "",
+      "summary": "Building scalable LLM-based data-pipeline and multi-agent products for global clients.",
+      "highlights": []
+    },
+    {
+      "name": "Technoidentity",
+      "position": "Associate AI/ML Engineer",
+      "url": "https://www.technoidentity.com",
+      "startDate": "2024-01",
+      "endDate": "",
+      "summary": "Designed and deployed production RAG and multi-agent LLM systems for L&D automation, resume ranking, and large-scale customer Q&A.",
+      "highlights": [
+        "Built multi-agent onboarding and assessment pipeline using LlamaIndex + Gemini embeddings.",
+        "Created dual-pipeline RAG system (Haystack + Milvus + Llama-3) with Redis caching and SSE streaming.",
+        "Delivered 70% reduction in manual resume screening via OpenAI-powered ranking tool."
+      ]
+    },
+    {
+      "name": "E-con Systems",
+      "position": "Computer Vision Intern",
+      "url": "https://www.e-consystems.com",
+      "startDate": "2024-01",
+      "endDate": "2024-07",
+      "summary": "Implemented pose-estimation pipelines and optimized inference for edge deployment.",
+      "highlights": [
+        "Achieved 96% accuracy on OpenPose/PersonLab implementation with INT8 quantization."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "IIITDM Kurnool",
+      "url": "https://iiitdmkl.ac.in",
+      "area": "Artificial Intelligence and Data Science",
+      "studyType": "Bachelor of Technology",
+      "startDate": "2020-08",
+      "endDate": "2024-05",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "LLM & AI",
+      "level": "Advanced",
+      "keywords": [
+        "LangChain",
+        "LlamaIndex",
+        "Haystack",
+        "RAG",
+        "Multi-agent",
+        "OpenAI API",
+        "Gemini",
+        "QLoRA",
+        "LoRA"
+      ]
+    },
+    {
+      "name": "Backend & APIs",
+      "level": "Advanced",
+      "keywords": [
+        "FastAPI",
+        "Python",
+        "SSE",
+        "Git"
+      ]
+    },
+    {
+      "name": "Databases",
+      "level": "Intermediate",
+      "keywords": [
+        "Milvus",
+        "Redis",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Cloud & Infra",
+      "level": "Intermediate",
+      "keywords": [
+        "AWS Bedrock",
+        "EC2",
+        "S3",
+        "Docker"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Conversational AI Chatbot (LangGraph)",
+      "description": "Production multi-agent chatbot with hybrid sparse+dense retrieval and real-time streaming.",
+      "highlights": [
+        "90% retrieval accuracy in production",
+        "Redis-backed session memory"
+      ],
+      "keywords": [
+        "LangGraph",
+        "FastAPI",
+        "Milvus"
+      ],
+      "startDate": "2024-05",
+      "endDate": "2024-07",
+      "url": "",
+      "roles": [
+        "Lead engineer"
+      ],
+      "entity": "Technoidentity",
+      "type": "Backend service"
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "volunteer": []
+}
