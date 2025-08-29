@@ -2,27 +2,27 @@
   "basics": {
     "name": "Chevula Jeevan",
     "label": "AI Engineer",
-    "image": "/photos/Chevula_Jeevan.jpg",
+    "image": "",
     "email": "jeevanchevulaa@gmail.com",
-    "phone": "+91 9700240125",
+    "phone": "+919700240125",
     "url": "https://linkedin.com/in/jeevan-chevula-9b3bb1221",
-    "summary": "Versatile AI/ML engineer with hands-on experience in RAG chatbots, Groq-powered LLM agents, and OCR/CV workflows. Passionate about shipping end-to-end GenAI solutions in cloud environments.",
+    "summary": "AI/ML Engineer with hands-on experience in Python, FastAPI, Computer Vision (OpenCV, OCR, YOLO), and Deep Learning (PyTorch, TensorFlow). Skilled in LLM applications using LangChain\n",
     "location": {
-      "address": "4-138 Gaddivanipally, Ellanthakunta",
+      "address": "4-138,Gaddivanipally,Ellanthakunta",
       "postalCode": "505475",
       "city": "Karimnagar",
-      "countryCode": "IN",
-      "region": "Telangana"
+      "countryCode": "India",
+      "region": ""
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "jeevan-chevula-9b3bb1221",
-        "url": "https://www.linkedin.com/in/jeevan-chevula-9b3bb1221"
+        "username": "Jeevan Chevula",
+        "url": "www.linkedin.com/in/jeevan-chevula-9b3bb1221"
       },
       {
         "network": "GitHub",
-        "username": "JeevanChevula",
+        "username": "JeevanChevula ",
         "url": "https://github.com/JeevanChevula"
       }
     ]
@@ -34,8 +34,9 @@
       "url": "https://pihexlabs.com",
       "startDate": "2025-08",
       "endDate": "",
-      "summary": "Developing Groq-powered multi-agent pipelines and image-processing modules for client projects.",
-      "highlights": []
+      "summary": "Building backend APIs and AI/ML workflows using Python, FastAPI, Computer Vision, and LLM integrations",
+      "highlights": [],
+      "description": ""
     },
     {
       "name": "HCL Technologies",
@@ -43,136 +44,241 @@
       "url": "https://www.hcltech.com",
       "startDate": "2022-09",
       "endDate": "2024-06",
-      "summary": "Contributed to AI-driven document automation and OCR projects within enterprise delivery teams.",
+      "summary": "Contributed to AI-driven document automation and OCR projects within enterprise delivery teams",
       "highlights": [
-        "Built invoice-field extractor (Tesseract + TF-IDF classifier) reducing manual effort by 60%",
-        "Implemented expiry-date detection pipeline deployed via FastAPI."
-      ]
+        {
+          "content": "Built invoice-field extractor (Tesseract + TF-IDF classifier) reducing manual effort by 60%",
+          "visible": true
+        },
+        {
+          "content": "Implemented expiry-date detection pipeline deployed via FastAPI",
+          "visible": true
+        }
+      ],
+      "location": "Nagpur"
     }
   ],
   "education": [
     {
       "institution": "Sri Indu College of Engineering and Technology",
-      "url": "",
+      "url": "https://sriindu.ac.in/",
       "area": "Computer Science & Engineering",
       "studyType": "Bachelor of Technology",
       "startDate": "2017-08",
       "endDate": "2021-06",
       "score": "7.5 CGPA",
-      "courses": []
+      "courses": [
+        "Data Structures and Algorithms",
+        "Database Management Systems",
+        "Software Engineering",
+        "Computer Networks"
+      ]
     }
   ],
   "skills": [
     {
-      "name": "GenAI & LLM",
+      "name": "Programming & Backend",
       "level": "Intermediate",
       "keywords": [
-        "Groq LLaMA 3",
-        "OpenAI API",
-        "Prompt Design",
-        "LangChain",
-        "Multi-Agent Systems"
+        {
+          "name": "Python",
+          "visible": true
+        },
+        {
+          "name": "FastAPI",
+          "visible": true
+        }
       ]
     },
     {
-      "name": "RAG & Vector DBs",
+      "name": "Deep Learning Frameworks",
       "level": "Intermediate",
       "keywords": [
-        "FAISS",
-        "ChromaDB",
-        "Recursive Text Split",
-        "PDF processing"
-      ]
-    },
-    {
-      "name": "Backend",
-      "level": "Intermediate",
-      "keywords": [
-        "FastAPI",
-        "Python"
+        {
+          "name": "PyTorch",
+          "visible": true
+        },
+        {
+          "name": "TensorFlow",
+          "visible": true
+        }
       ]
     },
     {
       "name": "Computer Vision",
       "level": "Intermediate",
       "keywords": [
-        "OpenCV",
-        "Tesseract",
-        "YOLO",
-        "Stable Diffusion"
+        {
+          "name": "OpenCV",
+          "visible": true
+        },
+        {
+          "name": "OCR (Tesseract, Invoice/Expiry Detection)",
+          "visible": true
+        },
+        {
+          "name": "YOLO",
+          "visible": true
+        },
+        {
+          "name": "MobileNetV2",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "name": "AI / ML & GenAI",
+      "level": "Intermediate",
+      "keywords": [
+        {
+          "name": "LangChain",
+          "visible": true
+        }
       ]
     }
   ],
   "projects": [
     {
-      "name": "AI-powered Health Claim Processing",
-      "description": "Modular multi-agent pipeline classifying medical PDFs and extracting structured fields with Groq LLaMA 3.",
+      "name": "Invoice OCR & Expiry Detection",
+      "description": "OCR-based pipelines to extract invoice fields and detect expiry dates from packaging using OpenCV and Tesseract\n   ",
       "highlights": [
-        "FastAPI backend",
-        "JSON inference output",
-        "Extensible agent design"
+        {
+          "content": "FastAPI backend",
+          "visible": true
+        },
+        {
+          "content": "Extracted invoice numbers, dates, totals using regex + classifiers",
+          "visible": true
+        }
       ],
       "keywords": [
-        "FastAPI",
-        "Groq",
-        "RAG"
+        {
+          "name": "OpenCV",
+          "visible": true
+        },
+        {
+          "name": "Tesseract",
+          "visible": true
+        },
+        {
+          "name": "OCR",
+          "visible": true
+        },
+        {
+          "name": "FastAPI",
+          "visible": true
+        }
       ],
-      "startDate": "2024-03",
-      "endDate": "2024-05",
+      "startDate": "2023-01",
+      "endDate": "2023-06",
       "url": "",
       "roles": [
-        "Lead developer"
+        {
+          "name": "Developer",
+          "visible": true
+        }
       ],
-      "entity": "Personal project",
-      "type": "Backend service"
+      "entity": "HCL TECH",
+      "type": ""
     },
     {
-      "name": "RAG FAQ Chatbot (Cloud Run)",
-      "description": "LangChain + FAISS/Chroma chatbot with PDF upload, deployed on Google Cloud Run.",
+      "name": " Product Expiry Date Detection from Packaging",
+      "description": " Built an OCR-based \nsystem using Tesseract and OpenCV to automatically detect and extract \nexpiry dates from printed labels on packaged goods. Applied preprocessing \ntechniques such as grayscale conversion, blurring, and adaptive thresholding \nto enhance text clarity. Used regular expressions to validate extracted dates \nand flag expired products. Achieved high reliability in varied packaging \nconditions. Deployed the solution using FastAPI and integrated it with the \nwarehouse dispatch system to prevent the shipment of expired items",
+      "highlights": [],
+      "keywords": [
+        {
+          "name": "OpenCV ",
+          "visible": true
+        },
+        {
+          "name": "Tesseract",
+          "visible": true
+        },
+        {
+          "name": "FastAPI",
+          "visible": true
+        }
+      ],
+      "startDate": "2022-08",
+      "endDate": "2022-12",
+      "url": "",
+      "roles": [],
+      "entity": "HCL TECH",
+      "type": ""
+    },
+    {
+      "name": "RAG FAQ Chatbot ",
+      "description": "LangChain + FAISS/Chroma chatbot with PDF upload, deployed on Google Cloud Run",
       "highlights": [
-        "Hybrid retrieval",
-        "Cloud-native deployment"
+        {
+          "content": "Hybrid retrieval",
+          "visible": true
+        },
+        {
+          "content": "Cloud-native deployment",
+          "visible": true
+        }
       ],
       "keywords": [
-        "LangChain",
-        "FAISS",
-        "Cloud Run"
+        {
+          "name": "LangChain",
+          "visible": true
+        },
+        {
+          "name": "RAG",
+          "visible": true
+        },
+        {
+          "name": "Faiss",
+          "visible": true
+        }
       ],
-      "startDate": "2024-06",
-      "endDate": "2024-07",
-      "url": "https://rag-faq-chatbot-490000420348.asia-south1.run.app",
-      "roles": [
-        "Developer"
-      ],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [],
       "entity": "Personal project",
-      "type": "Web service"
+      "type": ""
     }
   ],
   "awards": [],
   "certificates": [],
+  "publications": [],
   "languages": [
     {
       "language": "English",
-      "fluency": "Fluent"
+      "fluency": "Professional working proficiency"
     },
     {
       "language": "Telugu",
-      "fluency": "Native"
+      "fluency": "Native or bilingual proficiency"
     }
   ],
   "interests": [
     {
       "name": "Generative AI",
       "keywords": [
-        "Transformers",
-        "Diffusion Models"
+        {
+          "name": "Transformers",
+          "visible": true
+        },
+        {
+          "name": "Difffusion models",
+          "visible": true
+        }
       ]
     },
     {
       "name": "Sports",
       "keywords": [
-        "Cricket",
-        "Volleyball"
+        {
+          "name": "Cricket",
+          "visible": true
+        },
+        {
+          "name": "Volleyball",
+          "visible": true
+        }
       ]
     }
   ],
