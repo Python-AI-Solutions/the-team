@@ -1,0 +1,251 @@
+{
+    "$schema": "https://jsonresume.org/schema",
+    "meta": {
+      "lastModified": "2025-09-11",
+      "canonical": "",
+      "nsr": {
+        "sectionVisibility": {
+          "basics": true,
+          "work": true,
+          "education": true,
+          "skills": true,
+          "projects": true,
+          "awards": true,
+          "certificates": true,
+          "languages": false,
+          "interests": false,
+          "publications": true
+        },
+        "notes": "Converted from PDF resume (template includes the text 'Transformed By Uplers'). The PDF text did not contain actual URLs for LinkedIn/GitHub/Website, so those profile entries are included but hidden. Dates that only showed month/year were normalized to the first or last day of the month where needed.",
+        "source": "AI conversion"
+      }
+    },
+    "basics": {
+      "name": "Nagendra Dharmireddi",
+      "label": "Web Developer",
+      "email": "nagendra10082003@gmail.com",
+      "phone": "+91 6302040540",
+      "summary": "3D Web Developer with 2+ years of experience specializing in Three.js, React Three Fiber, and real-time graphics. Skilled in crafting immersive, performance-optimized 3D applications using TypeScript, shaders, GSAP, and postprocessing. Proven ability to design scalable, reusable 3D components for interactive tools, games, and visual interfaces. Passionate about building real-time applications that combine AI and 3D to create intelligent, engaging, and meaningful user experiences.",
+      "profiles": [
+        { "network": "LinkedIn", "url": "https://www.linkedin.com/in/nagendra-dharmireddi/", "visible": true },
+        { "network": "GitHub", "url": "https://github.com/pvscreations", "visible": true },
+        { "network": "Website", "url": "https://nagendra-dharmireddi.vercel.app/nagendra", "visible": true }
+      ],
+      "visible": true
+    },
+    "work": [
+      {
+        "id": "3c7f3e0a-3e8f-45c5-9b7c-1e3e3d2f9b1d",
+        "name": "PythonAISolutions",
+        "position": "Web Developer",
+        "startDate": "2025-09-01",
+        "visible": true
+      },
+      {
+        "id": "6a2b3bd1-7f3a-0f6f-2b50-f6a2d1b1b7d5",
+        "name": "Cognitivebotics",
+        "position": "Software Engineer",
+        "location": "Hyderabad",
+        "startDate": "2023-08-01",
+        "endDate": "2025-09-30",
+        "summary": "Building animation–AI frameworks, integrating ML with web graphics, and optimizing performance.",
+        "highlights": [
+          "Built an animation–AI framework with TypeScript, GSAP, React Three Fiber, and react-postprocessing; reduced development time by 75%.",
+          "Integrated TensorFlow models with TaskVision and TypeScript; added rule-based classification to improve model performance by 83% and cut data/training/testing time.",
+          "Optimized performance via modular, generic programming; completed benchmark evaluations that enhanced system efficiency."
+        ],
+        "visible": true
+      },
+      {
+        "id": "5c6cdd55-3d8c-8f19-c2b2-2d7c4a50f2c6",
+        "name": "Helping Hands",
+        "position": "Fullstack Developer",
+        "location": "Nuzvid",
+        "startDate": "2023-01-01",
+        "endDate": "2024-03-30",
+        "summary": "Introduced serverless computing and built a dynamic web app with zero server/database maintenance.",
+        "highlights": [
+          "Adopted Google APIs (Sheets, Drive) and Google Apps Script; reduced operational costs by 100% and streamlined scalability.",
+          "Redirected bandwidth to Google infrastructure to enhance reliability while reducing costs."
+        ],
+        "visible": true
+      },
+      {
+        "id": "a7c7b9f8-7f29-3e1a-6a6d-0e2c9d1c3e03",
+        "name": "Reliance Jio",
+        "position": "Data Science with Python Intern",
+        "location": "Remote",
+        "startDate": "2023-05-01",
+        "endDate": "2023-09-30",
+        "summary": "Worked on translation pipelines and research in audio captioning and bioacoustic event detection.",
+        "highlights": [
+          "Pre-processed medical data; implemented English-to-Hindi text transformation using tokenizers, transliterators, and Google Translate to improve accuracy.",
+          "Researched automated audio captioning and few-shot bioacoustic event detection, leveraging DCASE Community insights to enhance detection accuracy."
+        ],
+        "visible": true
+      },
+      {
+        "id": "b3e879ed-9c62-4d64-a0b8-24b59bfe1f5e",
+        "name": "APSSDC",
+        "position": "Data Science with Python Intern",
+        "location": "Remote",
+        "startDate": "2022-03-01",
+        "endDate": "2022-08-31",
+        "summary": "Hands-on practice with Python data-analysis libraries.",
+        "highlights": [ "Applied Pandas, NumPy, and Matplotlib for data analysis." ],
+        "visible": true
+      }
+    ],
+    "education": [
+      {
+        "id": "0aa8c2a4-7f0b-1c13-2a28-5ed47bd4c3d5",
+        "institution": "Rajiv Gandhi University of Knowledge and Technologies, Nuzvid",
+        "area": "Computer Science and Engineering",
+        "studyType": "B.Tech.",
+        "startDate": "2020-01-01",
+        "endDate": "2024-12-31",
+        "location": "Nuzvid, Andhra Pradesh",
+        "visible": true
+      },
+      {
+        "id": "a291b6e8-10a4-42d7-9b34-7da5e7b12d8b",
+        "institution": "Rajiv Gandhi University of Knowledge and Technologies, Nuzvid",
+        "area": "Higher Secondary",
+        "studyType": "Intermediate",
+        "startDate": "2018-01-01",
+        "endDate": "2020-12-31",
+        "location": "Nuzvid, Andhra Pradesh",
+        "visible": true
+      },
+      {
+        "id": "f2a4e017-61b0-40fc-a0f1-0c7b33f56b9b",
+        "institution": "Andhra Pradesh State Board of Secondary",
+        "area": "Secondary",
+        "studyType": "SSC",
+        "endDate": "2018-12-31",
+        "visible": true
+      }
+    ],
+    "skills": [
+      {
+        "name": "3D & Graphics",
+        "level": "",
+        "keywords": [ "Three.js", "React Three Fiber", "Shaders", "GSAP", "React-Postprocessing", "WebGL2" ],
+        "visible": true
+      },
+      {
+        "name": "Programming Languages",
+        "level": "",
+        "keywords": [ "TypeScript", "Python", "Java", "Bash", "Dart", "HTML", "CSS" ],
+        "visible": true
+      },
+      {
+        "name": "Frontend",
+        "level": "",
+        "keywords": [ "React", "Flutter" ],
+        "visible": true
+      },
+      {
+        "name": "Backend",
+        "level": "",
+        "keywords": [ "Node.js (MERN)", "Django", "PHP" ],
+        "visible": true
+      },
+      {
+        "name": "AI & Automation",
+        "level": "",
+        "keywords": [ "TensorFlow", "Selenium", "Google Apps Script" ],
+        "visible": true
+      },
+      {
+        "name": "Tools",
+        "level": "",
+        "keywords": [ "Git", "Postman", "MS Excel" ],
+        "visible": true
+      },
+      {
+        "name": "Platforms & DevOps",
+        "level": "",
+        "keywords": [ "AWS (EC2, S3)", "Serverless Computing", "Linux" ],
+        "visible": true
+      },
+      {
+        "name": "Others",
+        "level": "",
+        "keywords": [ "OAuth", "REST APIs", "WebAI" ],
+        "visible": true
+      }
+    ],
+    "projects": [
+      {
+        "id": "2e0dd6c6-0f37-45a5-8e5d-2e4f8d7f4d9a",
+        "name": "Futuristic Portfolio Website",
+        "description": "Interactive portfolio with Three.js, React Three Fiber, GSAP, and motion-design principles.",
+        "highlights": [
+          "Delivered visually immersive, futuristic UI with smooth interactions and creative transitions.",
+          "Integrated sound-reactive or sound-synchronized visuals."
+        ],
+        "keywords": [ "Three.js", "React Three Fiber", "GSAP", "Motion Design" ],
+        "roles": [ "Personal Project" ],
+        "startDate": "2025-07-01",
+        "visible": true
+      },
+      {
+        "id": "2f1a5a7e-7f6e-4d73-9c9a-0b6e1e4b4a0a",
+        "name": "Linter and Coding Guidelines Automater",
+        "description": "Rule-based system to enforce naming conventions on commits, branches, and identifiers.",
+        "highlights": [ "Improved code consistency and streamlined multi-team workflow." ],
+        "keywords": [ "Automation", "Linting", "Git" ],
+        "roles": [ "Personal Project" ],
+        "startDate": "2023-05-01",
+        "endDate": "2023-07-31",
+        "visible": true
+      },
+      {
+        "id": "f0e1c2c4-7a88-4a39-9b85-9c3c7f42b7e0",
+        "name": "Attendance Management System",
+        "description": "Facial recognition-based attendance system using React, Django, and MySQL.",
+        "highlights": [ "Used Google APIs and AWS (EC2, S3) to implement serverless/scalable infrastructure and reduce overhead." ],
+        "keywords": [ "React", "Django", "MySQL", "AWS", "Google APIs", "Serverless" ],
+        "roles": [ "RGUKT Nuzvid" ],
+        "startDate": "2023-01-01",
+        "endDate": "2023-04-30",
+        "visible": true
+      }
+    ],
+    "awards": [
+      {
+        "id": "a8456b2f-7f7d-4d12-9d94-ec1a4e5d8f7c",
+        "title": "Core Web Developer",
+        "date": null,
+        "awarder": "Helping Hands organization",
+        "summary": "Served as a core web developer for the Helping Hands organization.",
+        "visible": true
+      },
+      {
+        "id": "b5e1f94c-4a3d-4b6d-8c78-88e2f3b9f6e1",
+        "title": "State-Level Painting Competition Participant",
+        "awarder": "Water Department",
+        "summary": "Competed in a state-level painting competition conducted by the Water Department.",
+        "visible": true
+      },
+      {
+        "id": "6c9d0e1f-2b3a-4c5d-9e7f-4a5b6c7d8e9f",
+        "title": "2nd place - All India Shaolin-Power-Kick Karate (Kata - Juniors)",
+        "visible": true
+      }
+    ],
+    "certificates": [
+      { "id": "52c20c88-6d2d-4cf7-8c1a-1a9cabd2c9a4", "name": "Helping-Hands Certification", "issuer": "Helping Hands", "visible": true },
+      { "id": "a2a5f9d1-2f6a-447a-8bcd-13a70e5a4a5f", "name": "Data Science and Research & Development Certification", "issuer": "Reliance Jio", "visible": true },
+      { "id": "3a5ce4b8-6d78-4a3b-8b3a-4e8a9c2d7e6a", "name": "Data Science with Python Certification", "issuer": "APSSDC", "visible": true }
+    ],
+    "languages": [],
+    "interests": [],
+    "publications": [
+      { "name": "NPM Visual-Gestures Package", "publisher": "npm", "summary": "Developed VisualGestures.js for cursor control via finger movements (hover, click, drag, drop), improving accessibility and UX.", "visible": true },
+      { "name": "NPM Visualise-Data-Kit Package", "publisher": "npm", "summary": "TypeScript toolkit for static and animated visualizations tailored for TensorFlow models, improving visualization efficiency.", "visible": true }
+    ]
+  }
+
+  
