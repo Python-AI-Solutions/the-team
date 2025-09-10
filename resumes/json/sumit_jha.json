@@ -6,7 +6,7 @@
     "email": "7sumitjha@gmail.com",
     "phone": "+91 9971774238",
     "url": "https://isumit.in",
-    "summary": "Full‑stack engineer with strong Python/Django, FastAPI, and cloud exposure. Builds secure backends, clean data models, and rapid prototypes; leads small teams to ship fast, reliable software.",
+    "summary": "Full-stack engineer with expertise in AI-powered applications, medical imaging, and real-time graphics. Builds scalable Python/FastAPI backends, React frontends, and WebGL visualization systems with production deployment experience.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -34,7 +34,7 @@
       "url": "https://pihexlabs.com",
       "startDate": "2024-12",
       "endDate": "",
-      "summary": "Delivered a unified imaging UI demo and component library integrated into Niivue; simplified the rendering approach, improved reliability/UX,",
+      "summary": "Delivered end-to-end AI-powered medical imaging solutions and advanced UI component libraries. Built a full-stack clinical histological screening platform integrating YOLO deep learning models with interactive web-based viewers, while developing unified imaging UI demos and WebGL2 components for Niivue. Expertise spans FastAPI backends with CUDA optimization, real-time rendering systems, and production deployment with Docker/Kubernetes.",
       "highlights": [
       ],
       "projects": [
@@ -146,6 +146,26 @@
   ],
   "projects": [
     {
+      "name": "Clinical Histological screening interface",
+      "description": "Developed an end-to-end AI-powered Clinical Histological screening platform with real-time classification and interactive medical image visualization.",
+      "highlights": [
+        "Built a full-stack medical imaging application integrating YOLO deep learning models for automated cervical cell classification with 92%+ confidence scoring",
+        "Engineered an interactive web-based viewer using Niivue library with real-time overlay rendering, ROI navigation, and drag-and-drop functionality for cytology slide analysis",
+        "Developed FastAPI REST API with CUDA optimization for real-time image inference, supporting multiple input formats (base64, URLs, file uploads) and fallback mechanisms",
+        "Delivered production-ready deployment with Docker containerization and Kubernetes manifests, enabling scalable medical AI workflows for clinical environments"
+      ]
+    },
+    {
+      "name": "Niivue",
+      "description": "Delivered a unified imaging UI demo and component library integrated into Niivue; simplified rendering, improved reliability/UX, and set direction for a consolidated HUD overlay.",
+      "highlights": [
+        "Built the @niivue/niivue-uikit demo package showcasing WebGL2 UIKit controls wired to Niivue in real time (brightness/contrast, opacity, zoom, slice navigation; crosshair/colorbar/radiological toggles; colormap and view‑mode selectors).",
+        "Implemented a single‑canvas HUD overlay prototype to replace multiple layers, reducing overdraw and state changes, fixing component overlap, and aligning UI to the brain view; made the kit configurable and reusable across web and desktop.",
+        "Enhanced rendering and text systems: added text, ruler, and rectangle drawing; fixed UIKFont measurement and default font loading; eliminated white artifacts with transparent font textures; shader polish (e.g., circle GLSL).",
+        "Streamlined developer workflow with TypeScript configs and a dev:uikit script for rapid demo access; aligned design with maintainers to support reserving a UI panel region alongside image tiles. "
+      ]
+    },
+    {
       "name": "Scheduler",
       "description": "Secure, scalable scheduler with LDAP auth and migrations.",
       "highlights": [
@@ -185,26 +205,6 @@
       ],
       "entity": "Personal",
       "type": "Web application"
-    },
-    {
-      "name": "Clinical Histological screening interface",
-      "description": "Developed an end-to-end AI-powered Clinical Histological screening platform with real-time classification and interactive medical image visualization.",
-      "highlights": [
-        "Built a full-stack medical imaging application integrating YOLO deep learning models for automated cervical cell classification with 92%+ confidence scoring",
-        "Engineered an interactive web-based viewer using Niivue library with real-time overlay rendering, ROI navigation, and drag-and-drop functionality for cytology slide analysis",
-        "Developed FastAPI REST API with CUDA optimization for real-time image inference, supporting multiple input formats (base64, URLs, file uploads) and fallback mechanisms",
-        "Delivered production-ready deployment with Docker containerization and Kubernetes manifests, enabling scalable medical AI workflows for clinical environments"
-      ]
-    },
-    {
-      "name": "Niivue",
-      "description": "Delivered a unified imaging UI demo and component library integrated into Niivue; simplified rendering, improved reliability/UX, and set direction for a consolidated HUD overlay.",
-      "highlights": [
-        "Built the @niivue/niivue-uikit demo package showcasing WebGL2 UIKit controls wired to Niivue in real time (brightness/contrast, opacity, zoom, slice navigation; crosshair/colorbar/radiological toggles; colormap and view‑mode selectors).",
-        "Implemented a single‑canvas HUD overlay prototype to replace multiple layers, reducing overdraw and state changes, fixing component overlap, and aligning UI to the brain view; made the kit configurable and reusable across web and desktop.",
-        "Enhanced rendering and text systems: added text, ruler, and rectangle drawing; fixed UIKFont measurement and default font loading; eliminated white artifacts with transparent font textures; shader polish (e.g., circle GLSL).",
-        "Streamlined developer workflow with TypeScript configs and a dev:uikit script for rapid demo access; aligned design with maintainers to support reserving a UI panel region alongside image tiles. "
-      ]
     }
   ],
   "awards": [],
