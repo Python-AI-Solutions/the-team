@@ -77,10 +77,11 @@
       "url": "https://essentia.dev",
       "startDate": "2023-12",
       "endDate": "2024-12",
-      "summary": "Core contributor to OpenBharatOCR.",
+      "summary": "Developing and contributing to build an open-source Python library to OCR Indian Government documents.",
       "highlights": [
-        "Pre-processing pipeline improving OCR accuracy.",
-        "Helped design training workflow (TensorFlow + OpenCV)."
+        "Collaborated with a team of developers to design and implement core features of the OCR system, enhancing its accuracy and performance",
+        "Utilized technologies such as Python, TensorFlow, and OpenCV to build and train machine learning models for text recognition",
+        "Implemented pre-processing techniques for image correction, noise reduction, and text segmentation to improve OCR accuracy"
       ]
     },
     {
@@ -89,10 +90,12 @@
       "url": "",
       "startDate": "2023-04",
       "endDate": "2023-11",
-      "summary": "Developed low-code Zoho apps; integrated external APIs.",
+      "summary": "Developed custom applications on the Zoho Platform using Creator, which is a powerful low-code application development platform that helps in building custom web and mobile apps faster.",
       "highlights": [
-        "Built P2P requisition app.",
-        "Designed intern onboarding & training."
+        "Developed and contributed to building a P2P (Procurement to Purchase) application for recording and processing purchase requisitions within an organization",
+        "Developed various software models including: Approval chain, Hiring Model, Farming Model, Inventory Management",
+        "Implemented multiple API integration of Zoho Creator with other platforms",
+        "Developed a monitoring and training program for interns to enhance their performance and improve skills"
       ]
     }
   ],
@@ -126,9 +129,16 @@
         "FastAPI",
         "Flask",
         "SQLAlchemy",
+        "Alembic",
         "Pydantic",
         "PostgreSQL",
-        "MongoDB"
+        "MongoDB",
+        "SQLite",
+        "Node.js",
+        "Express.js",
+        "REST API",
+        "LDAP",
+        "Active Directory"
       ]
     },
     {
@@ -137,9 +147,11 @@
       "keywords": [
         "React",
         "JavaScript",
-        "HTML",
-        "CSS",
-        "Bootstrap"
+        "HTML/CSS",
+        "Bootstrap",
+        "jQuery",
+        "DOM",
+        "WebGL/WebGL2"
       ]
     },
     {
@@ -148,10 +160,52 @@
       "keywords": [
         "Docker",
         "Nginx",
-        "Google Cloud",
+        "Google Cloud Platform",
+        "AWS (Familiar)",
         "Git",
         "CI/CD",
-        "LDAP"
+        "GitHub Actions",
+        "Kubernetes",
+        "CUDA"
+      ]
+    },
+    {
+      "name": "Machine Learning & AI",
+      "level": "Intermediate",
+      "keywords": [
+        "TensorFlow",
+        "OpenCV",
+        "Computer Vision",
+        "OCR",
+        "Image Processing",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "Low-Code Platforms",
+      "level": "Intermediate",
+      "keywords": [
+        "Zoho Creator",
+        "Deluge"
+      ]
+    },
+    {
+      "name": "Development Tools",
+      "level": "Advanced",
+      "keywords": [
+        "VS Code",
+        "Visual Studio",
+        "PyCharm",
+        "Jupyter Notebook",
+        "Postman",
+        "npm",
+        "Yarn",
+        "Pytest",
+        "Playwright",
+        "Pre-commit hooks",
+        "Ruff",
+        "ESLint",
+        "Prettier"
       ]
     }
   ],
@@ -209,39 +263,171 @@
       "type": "Backend service"
     },
     {
-      "name": "Calendar-App",
-      "description": "Full-stack calendar with Django + React.",
+      "name": "OpenBharatOCR",
+      "description": "Open-source Python library to OCR Indian Government documents with advanced preprocessing and machine learning models.",
       "highlights": [
-        "CRUD events",
-        "JWT auth"
+        "Collaborated with development team to design and implement core OCR system features, enhancing accuracy and performance",
+        "Built and trained machine learning models for text recognition using Python, TensorFlow, and OpenCV",
+        "Implemented preprocessing techniques for image correction, noise reduction, and text segmentation to improve OCR accuracy"
+      ],
+      "keywords": [
+        "Python",
+        "TensorFlow",
+        "OpenCV",
+        "OCR",
+        "Machine Learning",
+        "Image Processing",
+        "Computer Vision"
+      ],
+      "startDate": "2023-12",
+      "endDate": "2024-12",
+      "url": "https://github.com/essentiasoftserv/openbharatocr",
+      "roles": [
+        "Software Developer"
+      ],
+      "entity": "Essentia.dev",
+      "type": "Open Source Library"
+    },
+    {
+      "name": "Calendar-App",
+      "description": "Full-stack calendar built with a Django REST API and a React frontend. Supports monthly/weekly views with create/update/delete and secure JWT-based access.",
+      "highlights": [
+        "Designed a clean REST schema for events (create/list/update/delete) with input validation and consistent ISO-8601 timestamps",
+        "Implemented JWT authentication (access/refresh) and protected routes for all event operations",
+        "Built responsive monthly/weekly views in React with controlled forms, inline edits, and loading/error states",
+        "Structured the repo as Django_Backend/ + React_Frontend/ with a Dockerfile for reproducible local runs"
       ],
       "keywords": [
         "Django",
-        "React"
+        "DRF",
+        "React",
+        "JWT",
+        "REST API",
+        "Docker"
       ],
       "startDate": "2022-10",
       "endDate": "2023-01",
       "url": "https://github.com/isumitjha/Calendar-App",
       "roles": [
-        "Full Stack Dev"
+        "Full Stack Developer"
       ],
       "entity": "Personal",
       "type": "Web application"
+    },
+    {
+      "name": "Gitstats",
+      "description": "CLI/utility that enumerates your public GitHub repositories and aggregates contributor statistics to produce a quick \"who-contributed-what\" view across projects.",
+      "highlights": [
+        "Queries the GitHub REST API to list public repositories and collect per-repo contributor stats",
+        "Handles pagination and basic rate-limit etiquette; supports personal access token via environment variable",
+        "Prints a readable summary for the terminal; results can be piped to file for further analysis",
+        "Simple, dependency-light implementation that's easy to customize"
+      ],
+      "keywords": [
+        "GitHub REST API",
+        "JSON",
+        "CLI",
+        "Python"
+      ],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/isumitjha/gitstats",
+      "roles": [
+        "Creator"
+      ],
+      "entity": "Personal",
+      "type": "CLI Tool"
+    },
+    {
+      "name": "COVID-19 Dashboard (Panel)",
+      "description": "Interactive COVID-19 dashboard built entirely in Python using Panel for the web app layer; demonstrates rich charts/tables without writing HTML/CSS/JS.",
+      "highlights": [
+        "Visualizes COVID-19 data with interactive charts and tables (Panel + Bokeh/Matplotlib)",
+        "Simple local run: panel serve app.py with a small requirements.txt for quick setup",
+        "Clear separation of data loading, transforms (Pandas), and view components for maintainability",
+        "Extensible foundation for adding filters, new data sources, or live API updates"
+      ],
+      "keywords": [
+        "Python",
+        "Panel",
+        "Bokeh",
+        "Pandas",
+        "Matplotlib"
+      ],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://github.com/isumitjha/COVID-19-Dashboard-using-Panel",
+      "roles": [
+        "Creator"
+      ],
+      "entity": "Personal",
+      "type": "Dashboard Application"
     }
   ],
-  "awards": [],
-  "certificates": [
-    {
-      "name": "Python & Django Full-Stack Bootcamp (Udemy)",
-      "date": "2022-06",
-      "issuer": "Udemy",
-      "url": ""
-    },
+  "awards": [
     {
       "name": "Lightning Talk – PyCon India 2024",
       "date": "2024-09",
       "issuer": "PyCon India",
+      "summary": "Panel – The Powerful Data Exploration & Web App Framework for Python",
+      "url": "https://www.canva.com/design/DAGRIKvKUWU/29WK-uTDzW5FTtKLfHRI0g/edit"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "The Python Programming Comprehensive Bootcamp",
+      "date": "",
+      "issuer": "Udemy",
       "url": ""
+    },
+    {
+      "name": "Python and Django Full Stack Web Developer Bootcamp",
+      "date": "",
+      "issuer": "Udemy",
+      "url": ""
+    },
+    {
+      "name": "JavaScript (Intermediate)",
+      "date": "",
+      "issuer": "HackerRank",
+      "url": ""
+    },
+    {
+      "name": "Problem Solving (Basic)",
+      "date": "",
+      "issuer": "HackerRank",
+      "url": ""
+    },
+    {
+      "name": "CSS",
+      "date": "",
+      "issuer": "HackerRank",
+      "url": ""
+    },
+    {
+      "name": "Enhancing Soft Skills and Personality",
+      "date": "",
+      "issuer": "NPTEL",
+      "url": ""
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Open Source Community",
+      "position": "Contributor",
+      "startDate": "2022-01",
+      "endDate": "",
+      "summary": "Active contributor to various open source projects including jupyterlab-conda-store, openbharatocr, sympy, jupyterlab-pioneer, nebari, nebari-docs, Panel, and sgkit.",
+      "highlights": [
+        "Contributed to jupyterlab-conda-store: JupyterLab extension for managing conda environments",
+        "Enhanced openbharatocr: Open-source OCR library for Indian Government documents",
+        "Improved sympy: Python library for symbolic mathematics",
+        "Contributed to jupyterlab-pioneer: JupyterLab extension for educational research",
+        "Enhanced nebari and nebari-docs: Cloud-native data science platform",
+        "Contributed to Panel: High-level data visualization framework",
+        "Improved sgkit: Statistical genetics toolkit"
+      ],
+      "url": "https://github.com/isumitjha"
     }
   ],
   "languages": [
@@ -250,6 +436,24 @@
       "fluency": "Fluent"
     }
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Other Skills",
+      "keywords": [
+        "Logic Building",
+        "Problem Solving", 
+        "Time Management",
+        "Leadership Skills",
+        "Team Collaboration",
+        "Mentoring & Training",
+        "Code Review",
+        "Technical Documentation",
+        "Agile Development",
+        "Critical Thinking",
+        "Communication Skills",
+        "Project Management"
+      ]
+    }
+  ],
   "references": []
 }
