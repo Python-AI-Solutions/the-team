@@ -57,6 +57,17 @@
             "Enhanced rendering and text systems: added text, ruler, and rectangle drawing; fixed UIKFont measurement and default font loading; eliminated white artifacts with transparent font textures; shader polish (e.g., circle GLSL).",
             "Streamlined developer workflow with TypeScript configs and a dev:uikit script for rapid demo access; aligned design with maintainers to support reserving a UI panel region alongside image tiles. "
           ]
+        },
+        {
+          "name": "FMRIF Scheduler",
+          "description": "Architected a production-ready Flask scheduling application with enterprise authentication, containerized CI/CD, and comprehensive testing infrastructure.",
+          "highlights": [
+            "Built enterprise LDAP authentication with NIH Active Directory integration, supporting email/username login, account status validation, connection pooling, and secure token-based sessions",
+            "Reworked configuration management using Pydantic-settings with nested classes, type validation, and dual .env/environment variable support with automatic discovery",
+            "Implemented comprehensive CI/CD pipeline with GitHub Actions, dual-stack testing (Python pytest + Playwright), browser caching, containerized environments, and coverage reporting",
+            "Containerized application stack with Docker Compose orchestrating PostgreSQL, LDAP, and Flask services; automated database initialization and multi-environment deployment",
+            "Enhanced developer workflow with pre-commit hooks (Ruff, Prettier, ESLint), automated setup scripts, and streamlined onboarding process"
+          ]
         }
       ]
     },
@@ -166,22 +177,33 @@
       ]
     },
     {
-      "name": "Scheduler",
-      "description": "Secure, scalable scheduler with LDAP auth and migrations.",
+      "name": "FMRIF Scheduler",
+      "description": "Architected a production-ready Flask scheduling application with enterprise authentication, containerized CI/CD, and comprehensive testing infrastructure.",
       "highlights": [
-        "End-to-end CI pipeline",
-        "RBAC"
+        "Built enterprise LDAP authentication with NIH Active Directory integration, supporting email/username login, account status validation, connection pooling, and secure token-based sessions",
+        "Reworked configuration management using Pydantic-settings with nested classes, type validation, and dual .env/environment variable support with automatic discovery",
+        "Implemented comprehensive CI/CD pipeline with GitHub Actions, dual-stack testing (Python pytest + Playwright), browser caching, containerized environments, and coverage reporting",
+        "Containerized application stack with Docker Compose orchestrating PostgreSQL, LDAP, and Flask services; automated database initialization and multi-environment deployment",
+        "Enhanced developer workflow with pre-commit hooks (Ruff, Prettier, ESLint), automated setup scripts, and streamlined onboarding process"
       ],
       "keywords": [
-        "Django",
+        "Python",
+        "Flask",
         "PostgreSQL",
-        "Alembic"
+        "Docker",
+        "LDAP",
+        "Active Directory",
+        "GitHub Actions",
+        "Pytest",
+        "Playwright",
+        "Pydantic",
+        "SQLAlchemy"
       ],
       "startDate": "2024-02",
       "endDate": "2024-05",
       "url": "https://github.com/isumitjha/Scheduler",
       "roles": [
-        "Lead developer"
+        "Full Stack Developer"
       ],
       "entity": "PiHex Labs",
       "type": "Backend service"
