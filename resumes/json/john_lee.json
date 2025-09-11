@@ -33,12 +33,6 @@
       },
       "profiles": [
         {
-          "network": "Website",
-          "username": "Python AI Solutions",
-          "url": "https://pythonaisolutions.com",
-          "visible": true
-        },
-        {
           "network": "GitHub",
           "username": "leej3",
           "url": "http://github.com/leej3/",
