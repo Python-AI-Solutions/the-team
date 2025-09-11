@@ -34,7 +34,7 @@
       "url": "https://pihexlabs.com",
       "startDate": "2024-12",
       "endDate": "",
-      "summary": "Delivered end-to-end AI-powered medical imaging solutions and advanced UI component libraries. Built a full-stack medical imaging platform integrating SOTA deep learning models with interactive web-based viewers, while developing unified imaging UI demos and WebGL2 components for Niivue. Expertise spans FastAPI backends with CUDA optimization, real-time rendering systems, and deployment with Docker/Kubernetes.",
+      "summary": "Delivered diverse full-stack solutions spanning AI-powered medical imaging, enterprise scheduling systems, and advanced UI component libraries. Built a medical imaging platform integrating SOTA deep learning models with interactive viewers, architected a production-ready Flask scheduler with enterprise LDAP authentication and comprehensive CI/CD, and developed unified imaging UI demos with WebGL2 components for Niivue. Expertise spans FastAPI/Flask backends, real-time rendering systems, enterprise authentication, and deployment with Docker/Kubernetes.",
       "highlights": [
       ],
       "projects": [
