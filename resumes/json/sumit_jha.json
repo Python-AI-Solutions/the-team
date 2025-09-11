@@ -34,7 +34,7 @@
       "url": "https://pihexlabs.com",
       "startDate": "2024-12",
       "endDate": "",
-      "summary": "Delivered end-to-end AI-powered medical imaging solutions and advanced UI component libraries. Built a full-stack clinical histological screening platform integrating YOLO deep learning models with interactive web-based viewers, while developing unified imaging UI demos and WebGL2 components for Niivue. Expertise spans FastAPI backends with CUDA optimization, real-time rendering systems, and production deployment with Docker/Kubernetes.",
+      "summary": "Delivered end-to-end AI-powered medical imaging solutions and advanced UI component libraries. Built a full-stack medical imaging platform integrating SOTA deep learning models with interactive web-based viewers, while developing unified imaging UI demos and WebGL2 components for Niivue. Expertise spans FastAPI backends with CUDA optimization, real-time rendering systems, and deployment with Docker/Kubernetes.",
       "highlights": [
       ],
       "projects": [
@@ -42,10 +42,10 @@
           "name": "Clinical Histological screening interface",
           "description": "Developed an end-to-end AI-powered Clinical Histological screening platform with real-time classification and interactive medical image visualization.",
           "highlights": [
-            "Built a full-stack medical imaging application integrating YOLO deep learning models for automated cervical cell classification with 92%+ confidence scoring",
+            "Built a full-stack medical imaging application integrating SOTA deep learning models with 92%+ confidence scoring",
             "Engineered an interactive web-based viewer using Niivue library with real-time overlay rendering, ROI navigation, and drag-and-drop functionality for cytology slide analysis",
             "Developed FastAPI REST API with CUDA optimization for real-time image inference, supporting multiple input formats (base64, URLs, file uploads) and fallback mechanisms",
-            "Delivered production-ready deployment with Docker containerization and Kubernetes manifests, enabling scalable medical AI workflows for clinical environments"
+            "Delivered deployment with Docker containerization and Kubernetes manifests, enabling scalable medical AI workflows for clinical environments"
           ]
         },
         {
@@ -149,10 +149,10 @@
       "name": "Clinical Histological screening interface",
       "description": "Developed an end-to-end AI-powered Clinical Histological screening platform with real-time classification and interactive medical image visualization.",
       "highlights": [
-        "Built a full-stack medical imaging application integrating YOLO deep learning models for automated cervical cell classification with 92%+ confidence scoring",
+        "Built a full-stack medical imaging application integrating SOTA deep learning models with 92%+ confidence scoring",
         "Engineered an interactive web-based viewer using Niivue library with real-time overlay rendering, ROI navigation, and drag-and-drop functionality for cytology slide analysis",
         "Developed FastAPI REST API with CUDA optimization for real-time image inference, supporting multiple input formats (base64, URLs, file uploads) and fallback mechanisms",
-        "Delivered production-ready deployment with Docker containerization and Kubernetes manifests, enabling scalable medical AI workflows for clinical environments"
+        "Delivered deployment with Docker containerization and Kubernetes manifests, enabling scalable medical AI workflows for clinical environments"
       ]
     },
     {
