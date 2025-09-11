@@ -364,11 +364,11 @@
       "type": "Dashboard Application"
     }
   ],
-  "awards": [
+  "publications": [
     {
       "name": "Lightning Talk – PyCon India 2024",
-      "date": "2024-09",
-      "issuer": "PyCon India",
+      "publisher": "PyCon India",
+      "releaseDate": "2024-09",
       "summary": "Panel – The Powerful Data Exploration & Web App Framework for Python",
       "url": "https://www.canva.com/design/DAGRIKvKUWU/29WK-uTDzW5FTtKLfHRI0g/edit"
     }
