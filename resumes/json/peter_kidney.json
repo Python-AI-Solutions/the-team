@@ -1,0 +1,127 @@
+{
+    "$schema": "https://jsonresume.org/schema",
+    "meta": {
+      "lastModified": "2025-11-26",
+      "canonical": "https://pythonaisolutions.com",
+      "nsr": {
+        "sectionVisibility": {
+          "basics": true,
+          "work": true,
+          "education": true,
+          "skills": true,
+          "projects": true,
+          "awards": false,
+          "certificates": true,
+          "languages": false,
+          "interests": false
+        },
+        "notes": "Created from LinkedIn profile information",
+        "source": "LinkedIn profile"
+      }
+    },
+    "basics": {
+      "name": "Peter Kidney",
+      "label": "Commercial Strategy Advisor",
+      "summary": "Chartered Accountant with extensive experience in medical diagnostics and healthcare commercialization. Co-founded a medical diagnostics company that secured €17 million in funding, successfully obtained CE-marking for 17 diagnostic products, and established partnerships with 42 international distributors. Currently focused on innovative technologies for early-stage cancer screening diagnostics from non-invasive patient samples. Provides essential insights into regulatory pathways, business planning, and commercialization strategies for healthcare startups.",
+      "location": {
+        "city": "Dublin",
+        "region": "Greater Dublin",
+        "countryCode": "IE"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "peter-kidney",
+          "url": "https://www.linkedin.com/in/peter-kidney-427808b6/",
+          "visible": true
+        }
+      ],
+      "visible": true
+    },
+    "work": [
+      {
+        "company": "Consultant / Self-Employed",
+        "position": "Finance specialist, startups and stock exchange listings, focus on disruptive medical diagnostics",
+        "url": "",
+        "startDate": "2022-11",
+        "endDate": "",
+        "summary": "Chartered Accountant with experience in both public and private companies at CFO, CEO, Chairman and non executive director level, with a particular focus on business planning for pre-revenue companies to guide them into revenue generation. Currently focused on innovative technologies for early stage cancer screening diagnostics from non-invasive patient samples.",
+        "highlights": [
+          "Business planning for pre-revenue companies",
+          "Medical diagnostics expertise",
+          "Regulatory pathway guidance",
+          "Healthcare commercialization strategies"
+        ],
+        "location": "Greater Dublin, Remote",
+        "visible": true
+      },
+      {
+        "company": "Medical Diagnostics Company",
+        "position": "Co-Founder",
+        "summary": "Co-founded a medical diagnostics company that achieved significant milestones in the healthcare industry.",
+        "highlights": [
+          "Raised €17 million in equity, debt and grants",
+          "Obtained CE-marking for 17 medical diagnostic products",
+          "Established partnerships with 42 international distributors",
+          "Led commercialization and regulatory strategies"
+        ],
+        "visible": true
+      }
+    ],
+    "education": [],
+    "skills": [
+      {
+        "name": "Financial Management",
+        "keywords": [
+          "CFO experience",
+          "Financial planning",
+          "Fundraising",
+          "Stock exchange listings"
+        ],
+        "visible": true
+      },
+      {
+        "name": "Medical Diagnostics",
+        "keywords": [
+          "CE marking",
+          "Regulatory compliance",
+          "Product commercialization",
+          "Cancer screening technologies"
+        ],
+        "visible": true
+      },
+      {
+        "name": "Business Strategy",
+        "keywords": [
+          "Business planning",
+          "Pre-revenue companies",
+          "Revenue generation",
+          "International partnerships"
+        ],
+        "visible": true
+      },
+      {
+        "name": "Leadership",
+        "keywords": [
+          "CEO experience",
+          "Chairman experience",
+          "Non-executive director",
+          "Startup advisory"
+        ],
+        "visible": true
+      }
+    ],
+    "projects": [],
+    "awards": [],
+    "certificates": [
+      {
+        "name": "Chartered Accountant",
+        "issuer": "Professional Accounting Body",
+        "visible": true
+      }
+    ],
+    "publications": [],
+    "languages": [],
+    "interests": [],
+    "references": []
+}

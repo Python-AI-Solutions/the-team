@@ -1,0 +1,120 @@
+{
+    "$schema": "https://jsonresume.org/schema",
+    "meta": {
+      "lastModified": "2025-11-26",
+      "canonical": "https://pythonaisolutions.com",
+      "nsr": {
+        "sectionVisibility": {
+          "basics": true,
+          "work": true,
+          "education": true,
+          "skills": true,
+          "projects": false,
+          "awards": false,
+          "certificates": false,
+          "languages": false,
+          "interests": false
+        },
+        "notes": "Created from LinkedIn profile information",
+        "source": "LinkedIn profile"
+      }
+    },
+    "basics": {
+      "name": "Dr. Claire Murphy",
+      "label": "Medical Advisor",
+      "summary": "Irish physician with over a decade of experience in Dublin hospitals, including St. James's Hospital and the National Maternity Hospital. Extensive expertise in women's health and screening programs, combined with a deep understanding of clinical workflows from laboratories to colposcopy clinics. Ensures practical, effective, and clinically integrated solutions for healthcare technology implementations.",
+      "location": {
+        "city": "Dublin",
+        "region": "County Dublin",
+        "countryCode": "IE"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "claire-murphy",
+          "url": "https://www.linkedin.com/in/claire-murphy-2ba775a7/",
+          "visible": true
+        }
+      ],
+      "visible": true
+    },
+    "work": [
+      {
+        "company": "Dublin Hospitals",
+        "position": "Physician",
+        "summary": "Over a decade of clinical experience across major Dublin healthcare institutions",
+        "highlights": [
+          "Clinical practice at St. James's Hospital",
+          "Experience at National Maternity Hospital",
+          "Women's health specialist",
+          "Screening programs expertise"
+        ],
+        "location": "Dublin, Ireland",
+        "visible": true
+      },
+      {
+        "company": "Hospice",
+        "position": "Medical Professional",
+        "summary": "Providing compassionate end-of-life care and medical expertise",
+        "location": "Dublin, Ireland",
+        "visible": true
+      }
+    ],
+    "education": [
+      {
+        "institution": "Trinity College, Dublin",
+        "area": "Medicine",
+        "studyType": "Medical Degree",
+        "visible": true
+      }
+    ],
+    "skills": [
+      {
+        "name": "Clinical Medicine",
+        "keywords": [
+          "Women's health",
+          "Screening programs",
+          "Clinical diagnostics",
+          "Hospital medicine"
+        ],
+        "visible": true
+      },
+      {
+        "name": "Healthcare Systems",
+        "keywords": [
+          "Clinical workflows",
+          "Laboratory processes",
+          "Colposcopy",
+          "Healthcare integration"
+        ],
+        "visible": true
+      },
+      {
+        "name": "Medical Advisory",
+        "keywords": [
+          "Clinical guidance",
+          "Healthcare technology",
+          "Medical consulting",
+          "Patient care"
+        ],
+        "visible": true
+      },
+      {
+        "name": "Specialized Areas",
+        "keywords": [
+          "Women's health",
+          "Cancer screening",
+          "Preventive medicine",
+          "Clinical pathways"
+        ],
+        "visible": true
+      }
+    ],
+    "projects": [],
+    "awards": [],
+    "certificates": [],
+    "publications": [],
+    "languages": [],
+    "interests": [],
+    "references": []
+}
